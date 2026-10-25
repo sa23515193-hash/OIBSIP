@@ -1,39 +1,146 @@
-# Crust & Co. — Pizza Shop Internship Project
 
-A responsive React + Vite pizza storefront with an optional Express API included in the same repository. The frontend is intentionally self-contained: menu data, favourites and cart work in the browser, so **you do not need to start the backend to preview or use the storefront**.
+# 🍕 Crust Pizza — Full-Stack Pizza Ordering Website
 
-## Features
-- Responsive home, menu, story and favourites views
-- Animated hero, continuously moving promo strip, food image cards and social gallery
-- Search, category filters, favourites/likes, quantity controls and cart persisted in localStorage
-- Delivery fee and free-delivery threshold calculation
-- Checkout form, order confirmation and FAQ accordion
-- Optional Express API health check and demo order endpoint
-- Frontend gracefully works when the API is not running
+A modern, responsive pizza ordering web application built with React, Vite, JavaScript, CSS, Node.js, and Express.js. The project delivers an engaging food-ordering experience with an interactive menu, shopping cart, favourites, checkout interface, and order confirmation.
 
-## Run on Windows (frontend only)
-1. Install Node.js LTS from https://nodejs.org/ if it is not installed.
-2. Extract the ZIP and open the `crust-pizza-shop` folder in VS Code.
-3. Open Terminal in that folder and run:
-   ```powershell
-   npm install
-   npm run dev
-   ```
-4. Open the local URL Vite prints (usually `http://localhost:5173`).
+## 🚀 Features
 
-## Optional API (same project/repository)
-In a second terminal in the same folder:
-```powershell
+- 🍕 Interactive pizza menu and food categories
+- 🔍 Menu browsing and search functionality
+- ❤️ Like and favourite food items
+- 🛒 Shopping cart with quantity controls
+- 💰 Automatic subtotal, delivery fee, and total calculation
+- 🎞️ Auto-sliding hero section and animated food showcases
+- 📦 Checkout interface and order confirmation
+- 💳 Demo payment interface
+- ❓ Frequently Asked Questions (FAQ) section
+- 📱 Responsive design for desktop, tablet, and mobile
+- 🧭 Modern navigation, promotional sections, and footer
+- ⚙️ Express.js backend included in the same repository
+- 🌐 Frontend can run independently of the backend
+
+## 🛠️ Technologies Used
+
+### Frontend
+- React.js
+- Vite
+- JavaScript
+- HTML5
+- CSS3
+
+### Backend
+- Node.js
+- Express.js
+- REST API architecture
+
+## 📂 Project Structure
+
+```text
+crust-pizza-shop/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── style.css
+├── server/
+│   └── server.js
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+> Note: The folder structure may vary slightly depending on the final project files.
+
+## 💻 Installation and Setup
+
+### Prerequisites
+
+- Node.js (LTS version recommended)
+- npm
+- Visual Studio Code (recommended)
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/sa23515193-hash/Crust-Pizza-Full-Stack-Project.git
+```
+
+### 2. Open the Project Folder
+
+```bash
+cd Crust-Pizza-Full-Stack-Project
+```
+
+### 3. Install Dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the Frontend
+
+```bash
+npm run dev
+```
+
+Open the local URL displayed in your terminal, usually:
+
+```text
+http://localhost:5173
+```
+
+### 5. Start the Backend (Optional)
+
+Open another terminal in the project directory and run:
+
+```bash
 npm run server
 ```
-The API is available at `http://localhost:5000/api/health`. The frontend still works without it. Demo orders are held in memory and are not permanent.
 
-## Build check
-```powershell
-npm run build
-```
+The backend is included in the same repository. Follow the configuration in `package.json` and the server files if your local setup requires additional environment variables.
 
-## GitHub upload
-Upload the complete folder contents (including `src`, `server`, `package.json`, `index.html`, and `README.md`) to one repository. Do not upload `node_modules`.
+## 🛍️ User Experience
 
-**Important limitations:** This is a demo storefront, not a production payment system. The card option is only a simulation; no payment is charged. Real online payments require a payment provider, server-side secret keys, webhook verification, secure order persistence, and deployment configuration. Menu text and indicative prices are inspired by publicly listed The Crust Pizza menu information; this is an independent student project and is not affiliated with that restaurant. Images are loaded from Unsplash URLs and require an internet connection.
+Customers can explore the menu, browse food categories, add items to their cart, adjust quantities, review totals, and interact with the checkout interface.
+
+The responsive layout is designed to provide a smooth experience across different screen sizes.
+
+## 💳 Payment Disclaimer
+
+The payment interface is for demonstration purposes. Real card payments require a payment gateway, secure server-side processing, and appropriate configuration.
+
+## 🎯 Project Goals
+
+- Practice modern frontend development
+- Build an interactive and responsive user interface
+- Explore full-stack application architecture
+- Improve component-based development skills
+- Create a practical food-ordering website project
+
+## 🔮 Future Improvements
+
+- Database integration for menu items and orders
+- User registration and authentication
+- Persistent order history
+- Real payment gateway integration
+- Restaurant admin dashboard
+- Live order tracking
+
+## 👩‍💻 Developer
+
+**Sawaira Ijaz**
+
+Computer Science Undergraduate | Web Developer
+
+GitHub: [@sa23515193-hash](https://github.com/sa23515193-hash)
+
+## 🏷️ Tags
+
+`React` `Vite` `JavaScript` `Node.js` `Express.js` `Full-Stack Development` `Pizza Ordering` `Responsive Web Design`
+
+---
+
+⭐ If you find this project interesting, consider giving the repository a star!
