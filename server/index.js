@@ -1,0 +1,11 @@
+import express from 'express';
+import cors from 'cors';
+import { randomUUID } from 'node:crypto';
+const app=express();
+app.use(cors());app.use(express.json({limit:'1mb'}));
+const orders=[];
+app.get('/api/health',(_req,res)=>res.json({ok:true,service:'Crust & Co. demo API'}));
+app.get('/api/menu',(_req,res)=>res.json({message:'Menu is bundled with the frontend so the storefront works without this API.',items:[]}));
+app.post('/api/orders',(req,res)=>{const {name,phone,address,payment,items,total}=req.body||{};if(!name||!phone||!address||!Array.isArray(items)||items.length===0)return res.status(400).json({error:'Name, phone, address and at least one item are required.'});const order={id:randomUUID(),name,phone,address,payment:payment||'cod',items,total:Number(total)||0,status:'received',createdAt:new Date().toISOString(),note:'Demo order stored in memory only; connect a database for persistence.'};orders.push(order);res.status(201).json({message:'Demo order received',order});});
+app.get('/api/orders',(req,res)=>res.json({orders:orders.map(({phone,address,...safe})=>safe),note:'In-memory demo orders are cleared when the server restarts.'}));
+const port=process.env.PORT||5000;app.listen(port,()=>console.log(`Crust & Co. demo API listening on http://localhost:${port}`));
